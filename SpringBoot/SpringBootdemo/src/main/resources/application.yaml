@@ -1,0 +1,45 @@
+#jdbc:
+#  driverClassName: com.mysql.jdbc.Driver
+#  url: jdbc:mysql://localhost:3306/springboot_test?useUnicode=true&characterEncoding=utf8
+#  username: root
+#  password: 123456
+
+
+spring:
+  profiles:
+    active: abc,def
+
+  #把JdbcConfig 类中的druid的配置删除或注释
+  #在刚才引入jdbc启动器的时候，SpringBoot已经自动帮我们引入了一个连接池,HikariCP应该是目前速度最快的连接池
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot_test?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+
+  redis:
+    host: localhost
+    port: 6379
+    timeout: 10000
+
+
+logging:
+  level:
+    com.itheima: debug
+    org.springframework: info
+
+# 映射端口
+server:
+  port: 80
+
+
+## mybatis配置
+#mybatis:
+#  # 实体类别名包路径
+#  type-aliases-package: com.itheima.pojo
+#  # 映射文件路径
+#  # mapper-locations: classpath:mappers/*.xml
+#  configuration:
+#    # 控制台输出执行sql
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
