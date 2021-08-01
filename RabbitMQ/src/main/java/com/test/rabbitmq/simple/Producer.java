@@ -21,11 +21,11 @@ public class Producer {
         //连接端口；默认5672
         connectionFactory.setPort(5672);
         //虚拟主机；默认/
-        connectionFactory.setVirtualHost("/itcast");
+        connectionFactory.setVirtualHost("/test");
         //用户名；默认guest
-        connectionFactory.setUsername("heima");
+        connectionFactory.setUsername("w12777");
         //密码；默认guest
-        connectionFactory.setPassword("heima");
+        connectionFactory.setPassword("w12777");
 
         //2. 创建连接；
         Connection connection = connectionFactory.newConnection();
